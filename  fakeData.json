@@ -1,0 +1,28 @@
+{
+    "nodes": [
+        {"id": "Farmer1", "group": 1},
+        {"id": "Farmer2", "group": 1},
+        {"id": "IngredientSupplier", "group": 2},
+        {"id": "FoodProcessor1", "group": 2},
+        {"id": "FoodProcessor2", "group": 2},
+        {"id": "PackagingCompany", "group": 3},
+        {"id": "Distributor", "group": 3},
+        {"id": "Retailer", "group": 4},
+        {"id": "EndConsumer", "group": 5},
+        {"id": "FoodSafetyAuthority", "group": 6}
+    ],
+    "links": [
+        {"source": "Farmer1", "target": "IngredientSupplier", "value": 3},
+        {"source": "Farmer2", "target": "IngredientSupplier", "value": 4},
+        {"source": "IngredientSupplier", "target": "FoodProcessor1", "value": 5},
+        {"source": "IngredientSupplier", "target": "FoodProcessor2", "value": 5},
+        {"source": "FoodProcessor1", "target": "PackagingCompany", "value": 3},
+        {"source": "FoodProcessor2", "target": "PackagingCompany", "value": 3},
+        {"source": "PackagingCompany", "target": "Distributor", "value": 4},
+        {"source": "Distributor", "target": "Retailer", "value": 5},
+        {"source": "Retailer", "target": "EndConsumer", "value": 6},
+        {"source": "FoodSafetyAuthority", "target": "FoodProcessor1", "value": 2},
+        {"source": "FoodSafetyAuthority", "target": "FoodProcessor2", "value": 2},
+        {"source": "FoodSafetyAuthority", "target": "Retailer", "value": 1}
+    ]
+}
